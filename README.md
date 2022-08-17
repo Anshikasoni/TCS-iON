@@ -5,15 +5,18 @@
 2. Flask
 
 **Clone the repository:**
+
 `git clone https://github.com/Anshikasoni/TCS-iON`
 
 **Install required libraries**
 
 Run this from a terminal in the project directory: 
+
 ` pip install -r requirements `
 
 **Run the application**
 Run this from a terminal in the project directory:
+
 ` python app.py `
 
 ## Website guide:
