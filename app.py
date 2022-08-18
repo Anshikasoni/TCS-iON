@@ -2,7 +2,7 @@ from flask import Flask, url_for, render_template, request, redirect, session
 from werkzeug.security import check_password_hash, generate_password_hash
 import os.path
 import sqlite3
-print(os.path.abspath("ion.project"))
+
 conn = sqlite3.connect(os.path.abspath("ion.project"), check_same_thread=False)
 c = conn.cursor()
 
@@ -99,5 +99,6 @@ def contactUs():
 @app.route("/")
 def index():
     return redirect("/home")
+
 if __name__ == '__main__':
     app.run()
