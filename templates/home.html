@@ -2,34 +2,32 @@
 
 {% block main %}
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Sell your bike</title>
+  <meta charset="UTF-8">
+  <title>Sell your bike</title>
 </head>
+
 <body>
-    <div
-    class="p-5 text-center bg-image"
-    style="
+  <div class="p-5 text-center bg-image" style="
       background-image: url(../static/images/bike.jpg);
       height: 600px;
-    "
-  >
+    ">
     <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
       <div class="d-flex justify-content-center align-items-center h-100">
         <div class="text-white">
           <h1 class="mb-3">Sell your bike Now</h1>
           <h4 class="mb-3">Best prices available here!!</h4>
-          <a class="btn btn-outline-light btn-lg" href="/register" role="button"
-          >Register Now!!</a
-          >
+          <a class="btn btn-outline-light btn-lg" href="/register" role="button">Register Now!!</a>
         </div>
       </div>
     </div>
   </div>
-</body>
-{% if (session["user_type"] == 0) %}
-    <h2>Contact-Us Entries</h2>
-    <table class="table">
+  {% if (session["user_type"] == 0) %}
+  <div class="container">
+    <button id="contact-us-button" onclick="contactUsButtonClick()" class="collapsible">Contact Us Entries</button>
+    <div class="content">
+      <table class="table">
         <thead>
           <tr>
             <th scope="col">Name</th>
@@ -39,16 +37,20 @@
           </tr>
         </thead>
         <tbody>
-            {% for contact in contacts %}
-            <tr>
-                <td>{{ contact[0] }}</td>
-                <td>{{ contact[1] }}</td>
-                <td>{{ contact[2] }}</td>
-                <td>{{ contact[3] }}</td>
-            </tr>
-        {% endfor %}
+          {% for contact in contacts %}
+          <tr>
+            <td>{{ contact[0] }}</td>
+            <td>{{ contact[1] }}</td>
+            <td>{{ contact[2] }}</td>
+            <td>{{ contact[3] }}</td>
+          </tr>
+          {% endfor %}
         </tbody>
       </table>
-{% endif %}
+    </div>
+  </div>
+  {% endif %}
+</body>
+
 </html>
 {% endblock %}
