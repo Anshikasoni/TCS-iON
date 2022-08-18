@@ -96,5 +96,8 @@ def contactUs():
     else:
         return render_template("contact-us.html")
 
+@app.route("/")
+def index():
+    return redirect("/home")
 if __name__ == '__main__':
     app.run()
