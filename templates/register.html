@@ -1,6 +1,8 @@
 {% extends "layout.html" %}
 
 {% block main %}
+<div class="container">
+    <h2>Registration</h2>
     <form action="/register" method="POST">
         <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
@@ -17,4 +19,5 @@
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+</div>
 {% endblock %}

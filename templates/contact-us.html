@@ -1,15 +1,16 @@
 {% extends "layout.html" %}
 
 {% block main %}
+<div class="container">
+    <h2>Contact Us</h2>
     <form action="/contactUs" method="POST">
         <div class="form-group">
             <label for="Name">Name</label>
             <input type="text" class="form-control" id="Name" name="name" required>
         </div>
         <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" required>
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" name="email" required>
         </div>
         <div class="form-group">
             <label for="message">Message</label>
@@ -21,4 +22,5 @@
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+</div>
 {% endblock %}
