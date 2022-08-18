@@ -69,3 +69,11 @@ Post entering the details, click on Submit
 
 The details will then be saved to the database (contactus table)
 Which then can be viewed from Admin user home page.
+
+### Technical Stack:
+1. Python
+2. Flask
+3. SQLite3
+4. HTML
+5. CSS
+6. JS
